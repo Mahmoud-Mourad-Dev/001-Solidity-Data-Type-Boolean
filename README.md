@@ -23,8 +23,31 @@ contract VariableExample {
 ## Booleans
 In Solidity, the boolean data type is used to represent logical values, 
 specifically true or false. The boolean data type is declared using the bool keyword.
+### Example 1
+```solidity
+// SPDX-License-Identifier:MIT
+pragma solidity ^0.8.0;
+
+contract BooleanExample {
+    bool isActivated;
+
+    function activate() public {
+        isActivated = true;
+    }
+
+    function deactivate() public {
+        isActivated = false;
+    }
+
+    function checkActivation() public view returns (bool) {
+        return isActivated;
+    }
+}
+```
+### Example 2
 
 ```solidity
+// SPDX-License-Identifier:MIT
 pragma solidity ^0.8.0;
 
 contract BooleanExample {
@@ -44,6 +67,26 @@ contract BooleanExample {
         bool result3 = !isTrue; // Logical NOT operation
 
         return result1 || result2 && result3; // Complex logical expression
+    }
+}
+```
+### Example 3
+```solidity
+// SPDX-License-Identifier:MIT
+pragma solidity ^0.8.0;
+
+contract ShortCircuitExample {
+    bool condition1 = true;
+    bool condition2 = false;
+
+    function function1() public view returns (bool) {
+        // This function will return true without evaluating condition2
+        return condition1 || condition2;
+    }
+
+    function function2() public view returns (bool) {
+        // This function will return false without evaluating condition1
+        return condition2 && condition1;
     }
 }
 ```
