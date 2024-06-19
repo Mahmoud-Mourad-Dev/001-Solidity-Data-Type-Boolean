@@ -91,6 +91,13 @@ contract ShortCircuitExample {
 }
 ```
 
+افترض أنك تعمل على برنامج يحذف الملفات المتكررة.
+
+لأداء جيد يجب أن تتحقق من حجم الملف أولا، ثم تَطابق المحتوى لأن جلب الحجم لا يأخذ وقت مهم مقارنة بمطابقة المحتوى مع الملفات الكبيرة.
+
+الجملة الشرطية يجب أن تكون
+
+
 ## Integers
 
 In Solidity, integers are divided into two categories: signed integers and unsigned integers.
