@@ -96,6 +96,32 @@ contract ShortCircuitExample {
 لأداء جيد يجب أن تتحقق من حجم الملف أولا، ثم تَطابق المحتوى لأن جلب الحجم لا يأخذ وقت مهم مقارنة بمطابقة المحتوى مع الملفات الكبيرة.
 
 الجملة الشرطية يجب أن تكون
+```javascript
+
+if((size1 == size2) AND compare(file1, file2))
+  remove(file2)
+```
+
+بفضل ميزة الـ short-circuit evaluation في أغلب لغات البرمجة مع && و || و غيرها، إن كانت (size1 == size2) قيمتها False فلن يتم التحقق من المحتوى بتشغيل الدالة compare، يحفظ الوقت و توفر طاقة (للأجهزة المحمولة).
+
+مع المعامل AND يشغل الشرط الثاني إذا كان الأول True.
+
+مع المعامل OR يشغل الشرط الثاني إذا كان الأول False.
+### Example 4
+```solidity
+// SPDX-License-Identifier:MIT
+ragma solidity ^0.8.0;
+
+contract LogicalNegationExample {
+    bool condition = true;
+
+    function negateCondition() public view returns (bool) {
+        // Logical negation using '!'
+        return !condition;
+    }
+}
+```
+
 
 
 ## Integers
