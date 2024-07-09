@@ -291,8 +291,65 @@ contract ShiftOperators {
 }
 ```
 
+### Fixed Point Numbers
 
+In Solidity, the statement "Fixed point numbers are not fully supported by Solidity yet.
+```solidity
 
+// SPDX-License-Identifier: MIT
+   pragma solidity  ^0.8.20;
+  contract FixedPointExample {
+    
+    fixed256x18 a; // Signed fixed-point number with 18 decimal places
+    ufixed256x18 b; // Unsigned fixed-point number with 18 decimal places
+
+    function setValues() public {
+        // These lines will cause an error because assignment is not supported
+       // a = fixed256x18(1.5); 
+        //b = ufixed256x18(2.5);
+    }
+ }
+```
+### Workaround Using Integer Arithmetic
+Since fixed-point arithmetic isn't fully supported, you can use integer arithmetic to emulate fixed-point numbers.
+ You do this by scaling your values. For instance, if you want to represent numbers with 2 decimal places,
+ you multiply all values by 100 (the scaling factor).
+
+```solidity
+
+ // SPDX-License-Identifier: MIT
+   pragma solidity  ^0.8.20;
+
+contract EmulatedFixedPoint {
+    uint256 constant SCALE = 100; // Scaling factor for 2 decimal places
+
+    function add(uint256 x, uint256 y) public pure returns (uint256) {
+        return (x + y);
+    }
+
+    function subtract(uint256 x, uint256 y) public pure returns (uint256) {
+        require(x >= y, "Underflow error");
+        return (x - y);
+    }
+
+    function multiply(uint256 x, uint256 y) public pure returns (uint256) {
+        return (x * y) / SCALE;
+    }
+
+    function divide(uint256 x, uint256 y) public pure returns (uint256) {
+        require(y != 0, "Division by zero error");
+        return (x * SCALE) / y;
+    }
+
+    function toFixed(uint256 x) public pure returns (uint256) {
+        return x * SCALE;
+    }
+
+    function fromFixed(uint256 x) public pure returns (uint256) {
+        return x / SCALE;
+    }
+}
+```
 
 
 
