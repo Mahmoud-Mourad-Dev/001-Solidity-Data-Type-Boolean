@@ -2,7 +2,7 @@
  Solidity is typed language, which means that the type of each variable  needs to be specified.
  Solidity types can interact with each other with operators
  The concept of “undefined” or “null” values does not exist in Solidity,
-
+ Null and Undefined: The Absence of Value
 
 ```solidity
 // SPDX-License-Identifier:MIT
@@ -87,6 +87,17 @@ contract ShortCircuitExample {
     function function2() public view returns (bool) {
         // This function will return false without evaluating condition1
         return condition2 && condition1;
+    }
+}
+```
+### Example 4 
+```solidity
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity ^0.8.0;
+
+contract Example {
+    function checkNegation(bool value) public pure returns (bool) {
+        return !value;
     }
 }
 ```
