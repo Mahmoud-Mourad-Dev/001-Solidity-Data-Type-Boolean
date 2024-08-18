@@ -62,11 +62,11 @@ contract BooleanExample {
 
     // Function to perform logical operations
     function performOperations() public view returns (bool) {
-        bool result1 = isTrue && isFalse; // Logical AND operation
-        bool result2 = isTrue || isFalse; // Logical OR operation
-        bool result3 = !isTrue; // Logical NOT operation
+        bool result1 = isTrue && isFalse; // Logical AND operation =false
+        bool result2 = isTrue || isFalse; // Logical OR operation =true
+        bool result3 = !isTrue; // Logical NOT operation =false
 
-        return result1 || result2 && result3; // Complex logical expression
+        return result1 || result2 && result3; // Complex logical expression  && first
     }
 }
 ```
