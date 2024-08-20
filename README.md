@@ -286,8 +286,8 @@ contract ComparisonOperators {
 pragma solidity ^0.8.0;
 
 contract BitwiseOperators {
-    uint public num1 = 0b1010; // Binary representation of 10
-    uint public num2 = 0b0101; // Binary representation of 5
+    uint public num1 = 10; // Binary representation of 10
+    uint public num2 = 5; // Binary representation of 5
 
     // Function to perform bitwise operations
     function performBitwiseOperations() public view returns (uint, uint, uint, uint) {
@@ -306,8 +306,8 @@ contract BitwiseOperators {
 pragma solidity ^0.8.0;
 
 contract ShiftOperators {
-    uint public num1 = 0b1010; // Binary representation of 10
-    uint public num2 = 0b0101; // Binary representation of 5
+    uint public num1 = 10; // Binary representation of 10
+    uint public num2 = 5; // Binary representation of 5
 
     // Function to perform shift operations
     function performShiftOperations() public view returns (uint, uint, uint, uint) {
@@ -319,6 +319,68 @@ contract ShiftOperators {
     }
 }
 ```
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract BitwiseExample {
+    uint8 public num1 = 10; // 10 بالثنائي
+    uint8 public num2 = 5; // 5 بالثنائي
+
+    // Perform bitwise AND
+    function bitwiseAnd() public view returns (uint8) {
+        return num1 & num2;
+    }
+
+    // Perform bitwise OR
+    function bitwiseOr() public view returns (uint8) {
+        return num1 | num2;
+    }
+
+    // Perform bitwise XOR
+    function bitwiseXor() public view returns (uint8) {
+        return num1 ^ num2;
+    }
+
+    // Perform bitwise NOT (on num1)
+    function bitwiseNot() public view returns (uint8) {
+        return ~num1;
+    }
+
+    // Perform left shift (<<)
+    function leftShift(uint8 shiftBy) public view returns (uint8) {
+        return num1 << shiftBy;
+    }
+
+    // Perform right shift (>>)
+    function rightShift(uint8 shiftBy) public view returns (uint8) {
+        return num1 >> shiftBy;
+    }
+}
+```
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract IntegerLimits {
+    // Max and Min for uint8
+    uint8 public maxUint8 = type(uint8).max;
+    uint8 public minUint8 = type(uint8).min;
+
+    // Max and Min for int8
+    int8 public maxInt8 = type(int8).max;
+    int8 public minInt8 = type(int8).min;
+
+    // Max and Min for uint256
+    uint256 public maxUint256 = type(uint256).max;
+    uint256 public minUint256 = type(uint256).min;
+
+    // Max and Min for int256
+    int256 public maxInt256 = type(int256).max;
+    int256 public minInt256 = type(int256).min;
+}
+```
+
 
 ### Fixed Point Numbers
 
