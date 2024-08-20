@@ -183,6 +183,29 @@ contract IntegerExample {
 }
 ```
 
+```soldity
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract IntegerComparisons {
+    int public a = 10;
+    int public b = -5;
+
+    // Function to compare integers
+    function compareIntegers() public view returns (bool, bool, bool, bool, bool, bool) {
+        bool isEqual = (a == b);        // هل a تساوي b؟
+        bool isNotEqual = (a != b);     // هل a لا تساوي b؟
+        bool isGreater = (a > b);       // هل a أكبر من b؟
+        bool isLess = (a < b);          // هل a أصغر من b؟
+        bool isGreaterOrEqual = (a >= b); // هل a أكبر من أو تساوي b؟
+        bool isLessOrEqual = (a <= b);    // هل a أصغر من أو تساوي b؟
+
+        return (isEqual, isNotEqual, isGreater, isLess, isGreaterOrEqual, isLessOrEqual);
+    }
+}
+```
+
 ### Example 3
 
 ```solidity
