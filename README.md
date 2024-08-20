@@ -23,7 +23,7 @@ contract VariableExample {
 ## Booleans
 In Solidity, the boolean data type is used to represent logical values, 
 specifically true or false. The boolean data type is declared using the bool keyword.
-### Example 1
+
 ```solidity
 // SPDX-License-Identifier:MIT
 pragma solidity ^0.8.0;
@@ -44,7 +44,6 @@ contract BooleanExample {
     }
 }
 ```
-### Example 2
 
 ```solidity
 // SPDX-License-Identifier:MIT
@@ -70,7 +69,7 @@ contract BooleanExample {
     }
 }
 ```
-### Example 3
+
 ```solidity
 // SPDX-License-Identifier:MIT
 pragma solidity ^0.8.0;
@@ -90,7 +89,7 @@ contract ShortCircuitExample {
     }
 }
 ```
-### Example 4 
+
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.0;
@@ -118,7 +117,7 @@ if((size1 == size2) AND compare(file1, file2))
 مع المعامل AND يشغل الشرط الثاني إذا كان الأول True.
 
 مع المعامل OR يشغل الشرط الثاني إذا كان الأول False.
-### Example 4
+
 ```solidity
 // SPDX-License-Identifier:MIT
 ragma solidity ^0.8.0;
@@ -156,7 +155,6 @@ contract IntegerExamples {
     int16 mediumTemp = 32767;  // Maximum value for int16
 }
 ```
-### Example 2
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -183,7 +181,7 @@ contract IntegerExample {
 }
 ```
 
-```soldity
+```solidity
 
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
@@ -206,7 +204,6 @@ contract IntegerComparisons {
 }
 ```
 
-### Example 3
 
 ```solidity
 
@@ -236,7 +233,6 @@ contract IntegerExample {
 }
 ```
 
-### Example 4
 ```solidity
 
 // SPDX-License-Identifier: MIT
@@ -262,7 +258,7 @@ contract IntegerOperators {
     }
 }
 ```
-### Example 5
+
 ``` solidity
 
 // SPDX-License-Identifier: GPL-3.0
@@ -285,7 +281,7 @@ contract ComparisonOperators {
     }
 }
 ```
-### Example 6
+
 ```solidity
 pragma solidity ^0.8.0;
 
@@ -305,7 +301,6 @@ contract BitwiseOperators {
 }
 ```
 
-### Example 7
 ```solidity
 
 pragma solidity ^0.8.0;
