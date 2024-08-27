@@ -1,4 +1,4 @@
-# Solidity-Data type-Ai
+# Solidity-Data-Type-Boolean
  Solidity is typed language, which means that the type of each variable  needs to be specified.
  Solidity types can interact with each other with operators
  The concept of “undefined” or “null” values does not exist in Solidity,
