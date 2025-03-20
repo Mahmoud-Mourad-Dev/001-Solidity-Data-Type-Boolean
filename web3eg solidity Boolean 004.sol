@@ -18,7 +18,7 @@ contract web3eg{
       isActive = true;
   }
 
-     function notAvtive() public{
+     function notActive() public{
        isActive = false;
   }
     function check() public view returns(bool){
