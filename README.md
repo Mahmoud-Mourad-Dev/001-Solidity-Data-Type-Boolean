@@ -9,9 +9,7 @@
 pragma solidity ^0.8.0;
 
 contract VariableExample {
-    uint public value; // Declared but not assigned a value, default is 0
     bool public value1; // default value false
-    address public value2; // default value 0x0000000000000000000000000000000000000000
 
 
 }
