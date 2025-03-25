@@ -64,18 +64,7 @@ contract BooleanExample {
         bool result3 = !isTrue; // Logical NOT operation =false
 
         return result1 || result2 && result3;
- /* Complex logical expression  && first
-باستخدام أولوية العمليات المنطقية في Solidity:
 
-&& (AND) له أولوية أعلى من || (OR)، فبيتم حسابه أولًا.
-
-result2 && result3 → true && false → false
-
-result1 || false → false || false → false
-
-النتيجة النهائية:
-الدالة هترجع false.
-*/
     }
 }
 ```
