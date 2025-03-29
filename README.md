@@ -5,9 +5,13 @@
  Null and Undefined: The Absence of Value
  
  [solidity course data type boolean 004](https://www.youtube.com/watch?v=ORSnw6ylxNU&t=17s)
+ 
  [solidity course task A 005](https://www.youtube.com/watch?v=T4XMFE2FYk0)
+ 
  [solidity course task A resolved 006](https://www.youtube.com/watch?v=5LknoK940Rw)
+ 
  [solidity course data type boolean operators 007](https://www.youtube.com/watch?v=OC6oiy6lde4)
+ 
  [solidity course data type boolean operators 008](https://www.youtube.com/watch?v=Q98eg-KkBMY)
 
 
