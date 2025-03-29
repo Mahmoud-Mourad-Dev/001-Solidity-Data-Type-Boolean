@@ -3,6 +3,8 @@
  Solidity types can interact with each other with operators
  The concept of “undefined” or “null” values does not exist in Solidity,
  Null and Undefined: The Absence of Value
+ [solidity course data type boolean 004](https://www.youtube.com/watch?v=ORSnw6ylxNU&t=17s)
+
 
 ```solidity
 // SPDX-License-Identifier:MIT
